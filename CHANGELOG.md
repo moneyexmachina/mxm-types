@@ -7,6 +7,11 @@ and the formatting guidelines of **[Keep a Changelog](https://keepachangelog.com
 
 ---
 
+## [0.1.1] - 2025-12-08
+
+### Added
+- Introduced `HeadersLike` as a canonical shared alias for HTTP header mappings.
+
 ## [0.1.0] - 2025-11-25
 
 ### Added

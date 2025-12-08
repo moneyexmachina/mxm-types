@@ -25,6 +25,8 @@ type JSONLike = JSONScalar | Sequence[JSONLike] | Mapping[str, JSONLike]
 type JSONObj = Mapping[str, JSONValue]  # preferred for params (read-only interface)
 type JSONMap = dict[str, JSONValue]  # preferred for concrete, mutable results
 
+type HeadersLike = Mapping[str, str | Sequence[str]]
+
 # Path-like ----------------------------------------------------------------------------
 
 type StrPath = str | PathLike[str]
@@ -47,6 +49,7 @@ class CLIFormatOptions(TypedDict, total=False):
 
 __all__ = [
     "CLIFormatOptions",
+    "HeadersLike",
     "JSONLike",
     "JSONMap",
     "JSONObj",
