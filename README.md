@@ -41,6 +41,7 @@ All other names are private and may change across releases.
 | `JSONLike`    | Permissive tree for accepting general `Sequence`/`Mapping` inputs |
 | `JSONObj`     | `Mapping[str, JSONValue]` — preferred for function parameters |
 | `JSONMap`     | `dict[str, JSONValue]` — preferred for concrete, mutable results |
+| `HeadersLike` | Canonical alias for HTTP Header Mappping. |
 
 ### Paths
 
