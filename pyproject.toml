@@ -1,11 +1,20 @@
 [tool.poetry]
 name = "mxm-types"
-version = "0.1.1"
-description = "Shared typing primitives for Money Ex Machina."
+version = "0.2.0"
+description = "Shared foundational types and representation adapters for Money Ex Machina."
 authors = ["mxm <contact@moneyexmachina.com>"]
 license = "MIT"
 readme = "README.md"
-keywords = ["money-ex-machina", "typing", "json", "types", "pep561"]
+keywords = [
+  "money-ex-machina",
+  "types",
+  "typing",
+  "timestamps",
+  "numpy",
+  "pandas",
+  "json",
+  "pep561",
+]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
@@ -21,12 +30,14 @@ include = [
 ]
 
 [tool.poetry.urls]
-"Homepage" = "https://github.com/moneyexmachina/"
+"Homepage" = "https://github.com/moneyexmachina/mxm-types"
 "Repository" = "https://github.com/moneyexmachina/mxm-types"
 "Issues" = "https://github.com/moneyexmachina/mxm-types/issues"
 
 [tool.poetry.dependencies]
 python = ">=3.13,<3.15"
+numpy = "^2.4.4"
+pandas = "^3.0.2"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.14.3"
