@@ -7,8 +7,28 @@ and the formatting guidelines of **[Keep a Changelog](https://keepachangelog.com
 
 ---
 
-## [Unreleased]
+## Unreleased
 - No pending changes.
+
+## [0.2.1] - 2026-05-07
+
+### Fixed
+- Updated `pyproject.toml` to use MXM namespace package declaration:
+  - `packages = [{ include = "mxm", from = "src" }]`
+- Removed non-canonical Ruff configuration (`exclude`) to match MXM tooling policy.
+- Simplified `isort` configuration to canonical MXM defaults.
+
+### Changed
+- Aligned project structure and configuration with `mxm-foundry` policy:
+  - Enforced PEP 420 namespace package model (`src/mxm` without `__init__.py`)
+  - Ensured package directory matches distribution name (`mxm-types` → `mxm/types`)
+- Updated `README.md` to conform to MXM documentation policy:
+  - Added required `## Purpose` and `## Installation` sections
+  - Standardized development workflow to use `make check`
+
+### Notes
+- This release introduces no changes to the public API.
+- Changes are structural and ensure full compliance with the MXM package standard enforced by `mxm-foundry`.
 
 ## [0.2.0] - 2026-04-16
 ### Added
@@ -89,6 +109,7 @@ and the formatting guidelines of **[Keep a Changelog](https://keepachangelog.com
 - Documentation and README with explicit API surface.
 
 ---
+[0.2.1]: https://github.com/moneyexmachina/mxm-types/releases/tag/v0.2.1
 [0.2.0]: https://github.com/moneyexmachina/mxm-types/releases/tag/v0.2.0
 [0.1.1]: https://github.com/moneyexmachina/mxm-types/releases/tag/v0.1.1
 [0.1.0]: https://github.com/moneyexmachina/mxm-types/releases/tag/v0.1.0

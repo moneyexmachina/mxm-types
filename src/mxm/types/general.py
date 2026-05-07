@@ -2,8 +2,13 @@ from __future__ import annotations
 
 from collections.abc import Mapping, Sequence
 from os import PathLike
-from typing import Any, Protocol, TypedDict, runtime_checkable
-from typing import Literal  # stricter options for CLIFormatOptions.format
+from typing import (
+    Any,
+    Literal,
+    Protocol,
+    TypedDict,
+    runtime_checkable,
+)
 
 # JSON types ---------------------------------------------------------------------------
 
