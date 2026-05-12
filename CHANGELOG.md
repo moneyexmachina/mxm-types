@@ -10,6 +10,31 @@ and the formatting guidelines of **[Keep a Changelog](https://keepachangelog.com
 ## Unreleased
 - No pending changes.
 
+## [0.2.2] - 2026-05-12
+
+### Changed
+
+- Relaxed pandas dependency constraint from:
+  ```toml
+  pandas = ">=3.0.2,<4.0.0"
+  ```
+  to:
+  ```toml
+  pandas = ">=2.3.3,<4.0.0"
+  ```
+
+### Fixed
+
+- Restored compatibility with the current MXM package ecosystem, including:
+  - `mxm-refdata`
+  - `mxm-v1`
+- Eliminated transitive dependency conflicts during Poetry resolution across MXM packages.
+
+### Notes
+
+- The previous pandas constraint was unnecessarily restrictive and forced ecosystem-wide upgrades to pandas 3.x before downstream packages were ready.
+- This release restores compatibility while preserving forward compatibility with future pandas 3.x adoption.
+- The issue highlighted the need for centralized dependency governance and synchronized dependency baselines across MXM packages.
 ## [0.2.1] - 2026-05-07
 
 ### Fixed
