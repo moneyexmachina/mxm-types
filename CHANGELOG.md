@@ -10,6 +10,16 @@ and the formatting guidelines of **[Keep a Changelog](https://keepachangelog.com
 ## Unreleased
 - No pending changes.
 
+## [0.3.0] - 2026-06-04
+
+### Added
+- Added `RuntimeIdentity` as the canonical shared runtime identity model.
+- Added typed runtime identity field aliases for app, environment, machine, substrate, and role.
+- Added documentation for the MXM runtime identity model.
+
+### Changed
+- Expanded package scope from representation-focused types to shared foundational vocabulary.
+
 ## [0.2.2] - 2026-05-12
 
 ### Changed
@@ -134,6 +144,9 @@ and the formatting guidelines of **[Keep a Changelog](https://keepachangelog.com
 - Documentation and README with explicit API surface.
 
 ---
+
+[0.3.0]: https://github.com/moneyexmachina/mxm-types/releases/tag/v0.3.0
+[0.2.2]: https://github.com/moneyexmachina/mxm-types/releases/tag/v0.2.2
 [0.2.1]: https://github.com/moneyexmachina/mxm-types/releases/tag/v0.2.1
 [0.2.0]: https://github.com/moneyexmachina/mxm-types/releases/tag/v0.2.0
 [0.1.1]: https://github.com/moneyexmachina/mxm-types/releases/tag/v0.1.1

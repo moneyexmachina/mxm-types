@@ -1,17 +1,32 @@
 """
-Shared foundational types and representation adapters for Money Ex Machina.
+Shared foundational types and vocabulary for Money Ex Machina.
 
 This package provides:
 
 - general shared aliases and micro-protocols
 - the canonical MXM timestamp substrate
 - explicit pandas boundary adapters for the canonical timestamp model
+- shared runtime and infrastructure vocabulary
 
-The package is intentionally small, stable, and representation-focused.
-Domain semantics and storage-specific adapters belong elsewhere.
+The package is intentionally small, stable, and dependency-light.
+
+mxm-types owns common representations and cross-package concepts that
+must be shared consistently throughout the MXM ecosystem.
+
+Business logic, storage adapters, configuration resolution, secret
+management, and runtime construction belong elsewhere.
 """
 
 from __future__ import annotations
+
+from mxm.types.runtime_identity import (
+    AppId,
+    Environment,
+    MachineId,
+    RuntimeIdentity,
+    RuntimeRole,
+    RuntimeSubstrate,
+)
 
 from .general import (
     CLIFormatOptions,
@@ -62,7 +77,9 @@ __all__ = [
     "INT64_DTYPE",
     "NAT_TS_NS",
     "TS_NS_DTYPE",
+    "AppId",
     "CLIFormatOptions",
+    "Environment",
     "HeadersLike",
     "Int64Array",
     "JSONLike",
@@ -71,6 +88,10 @@ __all__ = [
     "JSONScalar",
     "JSONValue",
     "KVReadable",
+    "MachineId",
+    "RuntimeIdentity",
+    "RuntimeRole",
+    "RuntimeSubstrate",
     "StrPath",
     "TSNSArray",
     "TSNSScalar",
