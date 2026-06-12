@@ -20,12 +20,7 @@ management, and runtime construction belong elsewhere.
 from __future__ import annotations
 
 from mxm.types.runtime_identity import (
-    AppId,
-    Environment,
-    MachineId,
     RuntimeIdentity,
-    RuntimeRole,
-    RuntimeSubstrate,
 )
 
 from .general import (
@@ -77,9 +72,7 @@ __all__ = [
     "INT64_DTYPE",
     "NAT_TS_NS",
     "TS_NS_DTYPE",
-    "AppId",
     "CLIFormatOptions",
-    "Environment",
     "HeadersLike",
     "Int64Array",
     "JSONLike",
@@ -88,10 +81,7 @@ __all__ = [
     "JSONScalar",
     "JSONValue",
     "KVReadable",
-    "MachineId",
     "RuntimeIdentity",
-    "RuntimeRole",
-    "RuntimeSubstrate",
     "StrPath",
     "TSNSArray",
     "TSNSScalar",

@@ -9,7 +9,44 @@ and the formatting guidelines of **[Keep a Changelog](https://keepachangelog.com
 
 ## Unreleased
 - No pending changes.
+## [0.3.1] - 2026-06-12
 
+### Changed
+
+- Simplified `RuntimeIdentity` typing by replacing custom string-alias identifier types with plain `str` fields.
+- Removed redundant runtime identifier aliases that duplicated information already expressed by field names.
+- Reduced friction when constructing `RuntimeIdentity` objects from:
+  - runtime discovery,
+  - configuration data,
+  - tests,
+  - CLI inputs,
+  - deployment tooling.
+
+### Architecture
+
+The MXM runtime identity model now treats:
+
+```text
+app
+environment
+machine
+substrate
+role
+```
+
+as validated identifiers represented directly as strings.
+
+The semantic meaning of each identifier is carried by the field name and runtime validation rather than by custom type aliases.
+
+This change improves interoperability across MXM packages while preserving the RuntimeIdentity contract used by:
+
+```text
+mxm-config
+mxm-runtime
+mxm-secrets
+```
+
+and future runtime materialisation workflows.
 ## [0.3.0] - 2026-06-04
 
 ### Added
@@ -145,6 +182,7 @@ and the formatting guidelines of **[Keep a Changelog](https://keepachangelog.com
 
 ---
 
+[0.3.1]: https://github.com/moneyexmachina/mxm-types/releases/tag/v0.3.1
 [0.3.0]: https://github.com/moneyexmachina/mxm-types/releases/tag/v0.3.0
 [0.2.2]: https://github.com/moneyexmachina/mxm-types/releases/tag/v0.2.2
 [0.2.1]: https://github.com/moneyexmachina/mxm-types/releases/tag/v0.2.1
